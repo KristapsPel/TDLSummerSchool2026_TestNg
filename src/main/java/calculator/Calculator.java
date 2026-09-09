@@ -30,7 +30,7 @@ public class Calculator {
     }
 
     public double divide(int a, int b) {
-        double result = (double) a / b;
+        int result = a / b;
         history.add(a + "/"+b+"="+result); // a=1 b=2 result=0.5 history.add("1/2=0.5")
         return result;
     }
