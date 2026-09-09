@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
 
-public class addTest {
+public class AddTest {
 
     Calculator calculator = new Calculator();
 
