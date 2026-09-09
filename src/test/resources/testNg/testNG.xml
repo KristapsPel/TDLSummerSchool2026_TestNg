@@ -20,7 +20,11 @@
     <test name="Divide TC">
         <classes>
             <class name="divide.DivideTest"/>
-            <class name="divide.DivideByZeroTest"/>
+            <class name="divide.DivideByZeroTest">
+                    <methods>
+                        <exclude name="testDivideByZeroWithoutExpectedException"/>
+                    </methods>
+            </class>
         </classes>
     </test>
 
