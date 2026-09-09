@@ -1,0 +1,16 @@
+<suite name ="Smoke test suite">
+    <test name="Smoke test">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="add.AddTest"/>
+            <class name="subtract.SubtractTest"/>
+            <class name="multiply.MultiplyTest"/>
+            <class name="divide.DivideByZeroTest"/>
+            <class name="divide.DivideTest"/>
+        </classes>
+    </test>
+</suite>

@@ -20,9 +20,9 @@ public class AddTest {
     Calculator calculator = new Calculator();
 
     @DataProvider(name = "addTestData")
-    public Object[][] createTestDataForAdd(){
+    public Object[][] createTestDataForAdd() {
         return new Object[][]{
-                {2 , 3, -1},
+                {2, 3, -1},
                 {-2, -3, -5},
                 {2, -3, -1},
                 {2, 0, 2}
@@ -31,15 +31,16 @@ public class AddTest {
 
     @Test(dataProvider = "addTestData",
             testName = "Add Test case",
-            description = "Testing add methode for Calculator class")
-    public void testAddCalculator(int a, int b, int result, Method method){
+            description = "Testing add methode for Calculator class",
+            groups = {"Regression", "Smoke"})
+    public void testAddCalculator(int a, int b, int result, Method method) {
         String description = method.getAnnotation(Test.class).description();
-        System.out.println("Description:"+description);
-        int actualResult=calculator.add(a,b);
-        if(actualResult==result){
+        System.out.println("Description:" + description);
+        int actualResult = calculator.add(a, b);
+        if (actualResult == result) {
             System.out.println("PASS");
         } else {
-            System.out.println("Actual result:"+actualResult+" but expected:"+result);
+            System.out.println("Actual result:" + actualResult + " but expected:" + result);
         }
     }
 

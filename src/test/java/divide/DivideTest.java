@@ -21,7 +21,8 @@ public class DivideTest {
 
     @Test(testName = "Divide test",
             description = "Test divide methode in Calculator",
-            dataProvider = "divideTestData")
+            dataProvider = "divideTestData",
+            groups = {"Regression", "Smoke"})
     public void testDivide(int a, int b, double expectedResult, Method method){
         String description = method.getAnnotation(Test.class).description();
         System.out.println(description);

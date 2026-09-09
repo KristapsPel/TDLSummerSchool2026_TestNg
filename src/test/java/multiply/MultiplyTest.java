@@ -21,7 +21,8 @@ public class MultiplyTest {
 
     @Test(testName = "Multiply test",
             description = "Test multiply methode in Calculator",
-            dataProvider = "multiplyTestData")
+            dataProvider = "multiplyTestData",
+            groups = {"Regression"})
     public void testMultiply(int a, int b, int expectedResult, Method method){
         String description = method.getAnnotation(Test.class).description();
         System.out.println(description);

@@ -21,7 +21,8 @@ public class SubtractTest {
 
     @Test(testName = "Subtract test",
             description = "Test subtract methode in Calculator",
-            dataProvider = "subtractTestData")
+            dataProvider = "subtractTestData",
+            groups = {"Regression"})
     public void testSubtraction(int a, int b, int expectedResult, Method method){
         String description = method.getAnnotation(Test.class).description();
         System.out.println(description);

@@ -1,0 +1,6 @@
+<suite name ="Smoke + Regression">
+    <suite-files>
+        <suite-file path="testng_regression.xml"/>
+        <suite-file path="testng_smoke.xml"/>
+    </suite-files>
+</suite>
