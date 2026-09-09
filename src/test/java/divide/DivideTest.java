@@ -1,6 +1,7 @@
 package divide;
 
 import calculator.Calculator;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -28,10 +29,7 @@ public class DivideTest {
         System.out.println(description);
 
         double actualResult = calculator.divide(a ,b);
-        if(actualResult==expectedResult){
-            System.out.println("Pass");
-        } else {
-            System.out.println("Actual result:"+actualResult+" Expected result:"+expectedResult);
-        }
+        Assert.assertEquals(actualResult, expectedResult,
+                "Actual result:"+actualResult+" Expected result:"+expectedResult);
     }
 }

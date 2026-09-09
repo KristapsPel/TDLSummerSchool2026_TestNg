@@ -10,6 +10,7 @@ package add;
 
 
 import calculator.Calculator;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -37,11 +38,8 @@ public class AddTest {
         String description = method.getAnnotation(Test.class).description();
         System.out.println("Description:" + description);
         int actualResult = calculator.add(a, b);
-        if (actualResult == result) {
-            System.out.println("PASS");
-        } else {
-            System.out.println("Actual result:" + actualResult + " but expected:" + result);
-        }
+        Assert.assertEquals(actualResult, result,
+                "FAILED:Actual result:" + actualResult + " but expected:" + result);
     }
 
 //    @Test

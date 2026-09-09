@@ -1,6 +1,7 @@
 package subtract;
 
 import calculator.Calculator;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -28,10 +29,6 @@ public class SubtractTest {
         System.out.println(description);
 
         int actualResult = calculator.subtract(a ,b);
-        if(actualResult==expectedResult){
-            System.out.println("Pass");
-        } else {
-            System.out.println("Actual result:"+actualResult+" Expected result:"+expectedResult);
-        }
+        Assert.assertTrue(actualResult==expectedResult);
     }
 }

@@ -1,6 +1,7 @@
 package multiply;
 
 import calculator.Calculator;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,7 +14,7 @@ public class MultiplyTest {
     public Object[][] createMultiplyTestData() {
         return new Object[][]{
                 {6, 2, 12},
-                {2, 3, 6},
+                {2, 3, 7},
                 {-1, 2, -2},
                 {10, 0, 0},
         };
@@ -28,10 +29,6 @@ public class MultiplyTest {
         System.out.println(description);
 
         int actualResult = calculator.multiply(a ,b);
-        if(actualResult==expectedResult){
-            System.out.println("Pass");
-        } else {
-            System.out.println("Actual result:"+actualResult+" Expected result:"+expectedResult);
-        }
+        Assert.assertEquals(actualResult, expectedResult, "Multiply result did not return expected value:");
     }
 }
