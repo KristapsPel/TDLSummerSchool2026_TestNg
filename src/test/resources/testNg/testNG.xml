@@ -1,0 +1,27 @@
+<suite name="Calculator tests">
+    <test name="Add TC">
+        <classes>
+            <class name="add.AddTest"/>
+        </classes>
+    </test>
+
+    <test name="Subtract TC">
+        <classes>
+            <class name="subtract.SubtractTest"/>
+        </classes>
+    </test>
+
+    <test name="Multiply TC">
+        <classes>
+            <class name="multiply.MultiplyTest"/>
+        </classes>
+    </test>
+
+    <test name="Divide TC">
+        <classes>
+            <class name="divide.DivideTest"/>
+            <class name="divide.DivideByZeroTest"/>
+        </classes>
+    </test>
+
+</suite>
